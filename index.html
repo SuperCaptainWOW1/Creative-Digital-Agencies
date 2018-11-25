@@ -13,26 +13,33 @@
 </head>
 <body>
 <header>
+<div class="top-header">
     <div class="container">
-        <div class="top-header d-flex">
-            <a href="#" class="logo"><img src="img/logo.png"></a>
-            <ul class="navbar-main ml-auto">
-                <li class="navbar-item">Home</li>
-                <li class="navbar-item">Pages</li>
-                <li class="navbar-item">Features</li>
-                <li class="navbar-item">Extensions</li>
-                <li class="navbar-item">Tutorials</li>
-                <li class="navbar-item">Contact Us</li>                
-            </ul>
-            <div class="social-block ml-auto d-flex justify-content-between">
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f social"></i></a>
-                <a href="https://www.twitter.com"><i class="fab fa-twitter social"></i></a>
-                <a href="https://www.skype.com"><i class="fab fa-skype social"></i></a>
-                <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in social"></i></a>
+        <div class="row">
+            <div class="col-2">
+                <a href="index.html" class="logo"><img src="img/logo.png"></a>
+            </div>
+            <div class="col-sm-10 col-lg-7 offset-lg-1">
+                <ul class="navbar">
+                    <li class="nav-item">Home</li>
+                    <li class="nav-item">Pages</li>
+                    <li class="nav-item">Features</li>
+                    <li class="nav-item">Extensions</li>
+                    <li class="nav-item">Tutorials</li>
+                    <li class="nav-item">Contact Us</li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <ul class="navbar navbar-social">
+                    <li class="nav-social"><a href="https://www.facebook.com"><i class="fab fa-facebook-f social"></i></a></li>
+                    <li class="nav-social"><a href="https://www.twitter.com"><i class="fab fa-twitter social"></i></a></li>
+                    <li class="nav-social"><a href="https://www.skype.com"><i class="fab fa-skype social"></i></a></li>
+                    <li class="nav-social"><a href="https://www.linkedin.com"><i class="fab fa-linkedin-in social"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <hr>
+</div>
     <div class="container">
         <div class="main-header col-12 text-center">
             <h1>Creatives</h1>
@@ -191,13 +198,13 @@
 <section class="between" id="between">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex">
+            <div class="between-item col-sm-12 col-md-6">
                 <i class="far fa-edit"></i>
                 <p>
                     Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
                 </p>
             </div>
-            <div class="col-sm-12 col-md-6 d-flex">
+            <div class="between-item col-sm-12 col-md-6">
                 <i class="far fa-edit"></i>
                 <p>
                     Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
@@ -339,5 +346,16 @@
         </div>
     </div>
 </footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("a[href^='#features']").click(function(){
+                var _href = $(this).attr("href");
+                $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+                return false;
+        });
+    });
+    </script>
 </body>
 </html>

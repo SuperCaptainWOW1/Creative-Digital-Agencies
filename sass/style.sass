@@ -5,60 +5,42 @@
     src: url('GothamPro-Medium.eot?#iefix') format('embedded-opentype'), url('GothamPro-Medium.woff') format('woff'), url('GothamPro-Medium.ttf') format('truetype')
     font-weight: normal
     font-style: normal
-@font-face 
-    font-family: 'Gotham Pro Bold'
-    src: url('GothamPro-Bold.eot')
-    src: url('GothamPro-Bold.eot?#iefix') format('embedded-opentype'), url('GothamPro-Bold.woff') format('woff'), url('GothamPro-Bold.ttf') format('truetype')
-    font-weight: normal
-    font-style: normal
-@font-face 
-    font-family: 'Gotham Pro Regular'
-    src: url('GothamPro.eot')
-    src: url('GothamPro.eot?#iefix') format('embedded-opentype'), url('GothamPro.woff') format('woff'), url('GothamPro.ttf') format('truetype')
-    font-weight: normal
-    font-style: normal
 
 /*---Style---*/
 body
     font-family: 'Gotham Pro Medium' !important
 
 header 
-    background: url('../img/main-bg.png') no-repeat top center / cover
-    height: 100vh
-    position: relative
-    hr
-        border-color: #7a7a7a
-        margin-top: 0
+    background: url('../img/main-bg.png') no-repeat center top / cover
     .top-header
-        align-items: center
-        padding: 20px 0
-        .social-block
-            display: flex
-            justify-content: space-between
-            .social
-                margin-right: 30px
-                color: #fff
-                font-size: 20px
-        .navbar-main
-            list-style: none
+        border-bottom: 1px solid #7e7e7e    
+        .logo
+            display: block
+            padding: 20px 0 15px 0
+        .navbar
             color: #fff
-            font-size: 20px
-            display: flex
-            justify-content: space-between
-            margin: 0
-            .navbar-item
+            list-style: none
+            padding-top: 25px
+            .nav-item
                 position: relative
-                text-align: center
-                padding: 0 5px 40px 5px
-                margin-right: 30px
-                bottom: -21px
+                top: 24px
+                border-bottom: 3px solid transparent
+                padding-bottom: 40px 
+                font-size: 18px
                 cursor: pointer
-            .navbar-item:hover 
-                border-bottom: 5px solid #11749e
-                padding-bottom: 35px
+            .nav-item:hover
+                border-bottom: 3px solid #11749e
+            .nav-social
+                font-size: 20px
+                position: relative
+                top: 22px
+                a
+                    color: #fff
+                    &:hover
+                        color: #11749e
     .main-header
-        font-family: 'Gotham Pro Medium'
-        padding-top: 25vh
+        padding-top: 275px
+        padding-bottom: 110px
         h1
             font-size: 150px
             color: #fff
@@ -93,25 +75,22 @@ header
                 text-decoration: none
 
 .features
-    background: url('../img/sec-bg.png') no-repeat center center / cover
-    height: 100vh
+    background: url('../img/sec-bg.png') no-repeat center top / cover
     color: #fff
     text-align: center
+    padding-bottom: 130px
     h2
-        font-family: 'Gotham Pro Medium'
         font-weight: 700
         text-transform: uppercase
         font-size: 38px
-        padding-top: 23vh
-        padding-bottom: 15vh
+        padding-top: 170px
+        padding-bottom: 150px
     h3
-        font-family: 'Gotham Pro Medium'
         font-weight: 700
         text-transform: uppercase
         font-size: 18px
         padding-bottom: 20px
     p
-        font-family: 'Gotham Pro Medium'
         font-size: 15px
     .feature-img
         display: flex
@@ -130,13 +109,10 @@ header
     .first-note
         color: #fff
         position: relative
-        height: 50vh
         .container
             padding: 80px 80px 80px 0
-            font-family: 'Gotham Pro Medium'
             span
                 font-size: 13px
-                
             h3
                 margin: 0
                 font-size: 25px
@@ -155,10 +131,9 @@ header
     .second-note
         color: #222222
         position: relative
-        height: 50vh
         .container
             transform: translateX(50%)
-            width: 33%
+            width: 600px
             padding: 80px 0 80px 80px
             span
                 font-size: 13px
@@ -205,9 +180,11 @@ header
     color: #fff
     padding: 110px 0
     align-items: center
-    i 
-        font-size: 80px
-        padding-right: 20px
+    .between-item
+        display: flex
+        i 
+            font-size: 80px
+            padding-right: 20px
 
 .app
     background: url('../img/fourth-bg.png') no-repeat center center / cover
@@ -313,17 +290,36 @@ footer
     color: #fff
     font-size: 13px
     
-
-
 /*---Media Queries --*/
+@media (max-width: 1200px)
+    .blog-item img
+        margin-left: 20%
+    .nav-item
+        font-size: 15px !important
+    .notes .second-note .container
+        width: 500px
+
 @media (max-width: 992px) 
-    .social-block
-        display: none
     h1
         font-size: 114px !important
+    .nav-social
+        font-size: 40px !important
+        top: 0 !important
+        padding-bottom: 20px
+    .nav-item
+        padding-bottom: 0 !important
+    .blog-item img
+        margin-left: 10%
+    .navbar-social
+        padding: 0 110px !important
+        padding-top: 25px
+    .notes .second-note .container
+        width: 400px
+    .contact input
+        margin-bottom: 30px
 
 @media (max-width: 768px)
  
 
 @media (max-width: 576px)
-
+    
